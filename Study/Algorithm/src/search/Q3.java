@@ -1,3 +1,5 @@
+package search;
+
 public class Q3 {
     public static int searchIdx(int[] a, int n, int key, int[] idx) {
         int nm=0;

@@ -1,3 +1,5 @@
+import search.Q3;
+
 public class App {
     public static void main(String[] args) throws Exception {
         int[] a = {1,9,2,9,4,6,7,9};
