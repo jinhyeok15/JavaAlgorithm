@@ -1,7 +1,5 @@
 package search;
 
-import javax.swing.text.Style;
-
 public class Q4 {
     public static int binSearch(int[] a, int n, int key) {
         int pl = 0;
