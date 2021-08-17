@@ -1,12 +1,45 @@
+import queue.IntQueue;
 import search.Q3;
+import queue.GQueue;
+
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] a = {1,9,2,9,4,6,7,9};
-        int n = 8;
-        int key = 9;
-        int[] idx = new int[3];
-        int search = Q3.searchIdx(a, n, key, idx);
-        System.out.println(search);
+        Scanner stdIn = new Scanner(System.in);
+        IntQueue s = new IntQueue(12);
+        while (true) {
+            System.out.println("현재 데이터 수: " + s.size() + "/" + s.capacity());
+            System.out.print("(1)인큐 (2)디큐 (3)피크x (4)덤프 (5)서치x (0)종료: ");
+
+            int menu = stdIn.nextInt();
+            if(menu==0) break;
+
+            int x;
+            switch (menu) {
+                case 1:
+                    System.out.print("데이터: ");
+                    x = stdIn.nextInt();
+                    try {
+                        s.enque(x);
+                    } catch (RuntimeException e) {
+                        System.out.println("큐가 가득 찼습니다.");
+                    }
+                    break;
+
+                case 2:
+                    try {
+                        x = s.deque();
+                        System.out.println("디큐한 데이터는 " + x + "입니다.");
+                    } catch (RuntimeException e) {
+                        System.out.println("큐가 비어 있습니다.");
+                    }
+                    break;
+
+                case 4:
+                    s.dump();
+                    break;
+        }
     }
+}
 }
