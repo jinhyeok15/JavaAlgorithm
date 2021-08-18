@@ -121,7 +121,7 @@ public class IntDeckQue {
         return num >= max;
     }
 
-    public void dump() {
+    public void dump() {  // 덤프 구현 질문!!
         if (num <= 0)
             System.out.println("큐가 비어있습니다.");
         else {
@@ -131,13 +131,12 @@ public class IntDeckQue {
             int _rear;
             if (dequeCursor>=0) {
                 front_ = dequeCursor;
-                if (dequeIdx==0)
+                if (dequeIdx==0)  // _front는 커서 방향이 음수로 세팅 되어야 함.
                     _front = max-1;
                 else
                     _front = dequeIdx-1;
-            }
-            else {
-                if(dequeIdx==0)
+            } else {
+                if(dequeIdx==0)  // 만일 deque를 실행시키지 않았다면, dequeIdx는 0이 되고 해당 인덱스에 값이 남아있음.
                     front_ = 0;
                 else
                     front_ = dequeIdx+1;
@@ -145,12 +144,11 @@ public class IntDeckQue {
             }
             if (enqueCursor>=0) {
                 _rear = enqueCursor-1;
-                if (enqueIdx==0)
+                if (enqueIdx==0)  // rear_는 커서 방향이 음수로 세팅 되어야 함.
                     rear_ = max-1;
                 else
                     rear_ = enqueIdx;
-            }
-            else {
+            } else {
                 _rear = enqueIdx;
                 rear_ = enqueCursor+max+1;
             }
