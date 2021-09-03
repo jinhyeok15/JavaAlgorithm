@@ -27,7 +27,7 @@ public class Q3 {
     }
 
     public static void main(String[] args) {
-        int[] a = {8, 16, 26, 32, 4};
+        int[] a = {8, 16, 27, 16, 4};
         System.out.println(gcdArray(a));
     }
 }
