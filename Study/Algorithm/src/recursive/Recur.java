@@ -26,14 +26,19 @@ public class Recur {
         IntStack s = new IntStack(n);
 
         while(true) {
-            if(n>0) {
+            if (n > 0){
                 s.push(n);
                 n = n-1;
                 continue;
             }
-            if (s.isEmpty() != true) {
-                
+            while (!s.isEmpty()){
+                if (n-1>0){
+                    
+                }
+                n = s.pop();
+                System.out.println(n);
             }
+            break;
         }
     }
 
