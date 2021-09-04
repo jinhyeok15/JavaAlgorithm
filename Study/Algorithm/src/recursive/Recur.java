@@ -23,17 +23,17 @@ public class Recur {
     }
 
     static void recur5(int n) {
-        int x, y, i, j, k;
-        for(i=1;i<=n;i++) {
-            y = Math.max(i-2, 0);
-            for (j=1; j<=y; j++) {
-                x = Math.max(j-1, 0);
-                for (k=1; k<=x; k++) {
-                    System.out.println(k);
-                }
-                System.out.println(j);
+        IntStack s = new IntStack(n);
+
+        while(true) {
+            if(n>0) {
+                s.push(n);
+                n = n-1;
+                continue;
             }
-            System.out.println(i);
+            if (s.isEmpty() != true) {
+                
+            }
         }
     }
 
