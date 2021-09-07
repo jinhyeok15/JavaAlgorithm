@@ -26,7 +26,7 @@ public class Recur {
         IntStack s = new IntStack(n);
 
         while(true) {
-            if(n>0) {
+            if (n > 0){
                 s.push(n);
                 n = n-1;
                 continue;
@@ -34,6 +34,7 @@ public class Recur {
             if (s.isEmpty() != true) {
 
             }
+            break;
         }
     }
 
