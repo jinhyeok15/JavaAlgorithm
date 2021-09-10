@@ -135,11 +135,30 @@ public class BubbleSort {
     }
 
     static void bubbleSort5(int[] a, int n) {
-        for (int i = n-1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (a[j + 1] < a[j]) {
-                    swap(a, j + 1, j);
+        int ilast;
+        int llast;
+        int i = n-1;
+        int l = 0;
+        while (l < n-1 && i > 0) {
+            if (i%2==1) {
+                ilast = n-1;
+                for (int j = 0; j < i; j++) {
+                    if (a[j + 1] < a[j]) {
+                        swap(a, j + 1, j);
+                        ilast = j;
+                    }
                 }
+                i = ilast;
+            }
+            else {
+                llast = 0;
+                for (int j = n - 1; j > l; j--) {
+                    if (a[j - 1] > a[j]) {
+                        swap(a, j - 1, j);
+                        llast = j;
+                    }
+                }
+                l = llast;
             }
         }
     }
@@ -157,7 +176,7 @@ public class BubbleSort {
             x[i] = stdIn.nextInt();
         }
 
-        bubbleSort4(x, nx);
+        bubbleSort5(x, nx);
 
         System.out.println("오름차순으로 정렬했습니다.");
         for (int i = 0; i < nx; i++)
