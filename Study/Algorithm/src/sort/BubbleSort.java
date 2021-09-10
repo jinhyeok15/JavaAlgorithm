@@ -135,31 +135,26 @@ public class BubbleSort {
     }
 
     static void bubbleSort5(int[] a, int n) {
-        int ilast;
-        int llast;
-        int i = n-1;
-        int l = 0;
-        while (l < n-1 && i > 0) {
-            if (i%2==1) {
-                ilast = n-1;
-                for (int j = 0; j < i; j++) {
-                    if (a[j + 1] < a[j]) {
-                        swap(a, j + 1, j);
-                        ilast = j;
-                    }
+        int left = 0;
+        int right = n-1;
+        int last = right;
+
+        while(left<right) {
+            for (int j = right; j>left; j--) {
+                if (a[j-1]>a[j]) {
+                    swap(a, j-1, j);
+                    last = j;
                 }
-                i = ilast;
             }
-            else {
-                llast = 0;
-                for (int j = n - 1; j > l; j--) {
-                    if (a[j - 1] > a[j]) {
-                        swap(a, j - 1, j);
-                        llast = j;
-                    }
+            left = last;
+
+            for (int j = left; j<right; j++) {
+                if(a[j] > a[j+1]) {
+                    swap(a, j, j+1);
+                    last = j;
                 }
-                l = llast;
             }
+            right = left;
         }
     }
 
