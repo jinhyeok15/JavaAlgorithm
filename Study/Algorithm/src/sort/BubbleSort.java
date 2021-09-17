@@ -2,14 +2,16 @@ package sort;
 
 import java.util.Scanner;
 
-public class BubbleSort {
-    static void swap(int[] a, int idx1, int idx2) {
+public class BubbleSort extends Sort {
+    @Override
+    public void swap(int[] a, int idx1, int idx2) {
         int t = a[idx1];
         a[idx1] = a[idx2];
         a[idx2] = t;
     }
 
     static void bubbleSort(int[] a, int n) {
+        BubbleSort sort = new BubbleSort();
         int compare = 0;
         int exchange = 0;
         for (int i = 0; i < n-1; i++) {
@@ -29,7 +31,7 @@ public class BubbleSort {
                     }
                 }
                 if (a[j - 1] > a[j]) {
-                    swap(a, j - 1, j);
+                    sort.swap(a, j - 1, j);
                     exchange++;
                 }
                 compare++;
@@ -46,13 +48,15 @@ public class BubbleSort {
     }
 
     static void bubbleSort2(int[] a, int n) {
+        BubbleSort sort = new BubbleSort();
         for (int i = n-1; i > 0; i--)
             for (int j = 0; j<i; j++)
                 if (a[j+1] < a[j])
-                    swap(a, j+1, j);
+                    sort.swap(a, j+1, j);
     }
 
     static void bubbleSort3(int[] a, int n) {
+        BubbleSort sort = new BubbleSort();
         int compare = 0;
         int exchange = 0;
         for (int i=0; i<n-1; i++) {
@@ -75,7 +79,7 @@ public class BubbleSort {
                 }
 
                 if (a[j-1]>a[j]){
-                    swap(a, j-1, j);
+                    sort.swap(a, j-1, j);
                     exchg++;
                     exchange++;
                 }
@@ -94,6 +98,7 @@ public class BubbleSort {
     }
 
     static void bubbleSort4(int[] a, int n) {
+        BubbleSort sort = new BubbleSort();
         int compare = 0;
         int exchange = 0;
         int k = 0;
@@ -115,7 +120,7 @@ public class BubbleSort {
                     }
                 }
                 if (a[j - 1] > a[j]) {
-                    swap(a, j - 1, j);
+                    sort.swap(a, j - 1, j);
                     last = j;
                     exchange++;
                 }
@@ -135,6 +140,7 @@ public class BubbleSort {
     }
 
     static void bubbleSort5(int[] a, int n) {
+        BubbleSort sort = new BubbleSort();
         int left = 0;
         int right = n-1;
         int last = right;
@@ -142,7 +148,7 @@ public class BubbleSort {
         while(left<right) {
             for (int j = right; j>left; j--) {
                 if (a[j-1]>a[j]) {
-                    swap(a, j-1, j);
+                    sort.swap(a, j-1, j);
                     last = j;
                 }
             }
@@ -150,7 +156,7 @@ public class BubbleSort {
 
             for (int j = left; j<right; j++) {
                 if(a[j] > a[j+1]) {
-                    swap(a, j, j+1);
+                    sort.swap(a, j, j+1);
                     last = j;
                 }
             }
