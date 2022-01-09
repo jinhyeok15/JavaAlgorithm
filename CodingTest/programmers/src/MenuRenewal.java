@@ -21,7 +21,7 @@ public class MenuRenewal {
     private static String[] dfs(String order, int courseNum, int[][] idxBox, int[] path) {
         int idx = idxBox[path[0]][path[1]];
         visited[idx] = true;
-
+        return new String[]{};
     }
     private static int[] nextPath(int[] path, int maxNum) {
         int m = path[0];

@@ -54,6 +54,16 @@
 <a href="programmers/src/NewsCluster.java">code</a>
 </details>
 
+<details><summary>14. 더 맵게</summary>
+<a href="https://programmers.co.kr/learn/courses/30/lessons/42626">Link to</a><br>
+<a href="programmers/src/MoreHot.java">code</a>
+</details>
+
+<details><summary>15. 조이스틱</summary>
+<a href="https://programmers.co.kr/learn/courses/30/lessons/42860">Link to</a><br>
+<a href="programmers/src/JoyStick.java">code</a>
+</details>
+
 # 백준 코딩 테스트
 <details><summary>1. 숫자판 점프</summary>
 <a href="https://www.acmicpc.net/problem/2210">Link to</a><br>
