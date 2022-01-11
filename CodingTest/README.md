@@ -64,6 +64,11 @@
 <a href="programmers/src/JoyStick.java">code</a>
 </details>
 
+<details><summary>16. N으로 표현</summary>
+<a href="https://programmers.co.kr/learn/courses/30/lessons/42895">Link to</a><br>
+<a href="programmers/src/ExpressN.java">code</a>
+</details>
+
 # 백준 코딩 테스트
 <details><summary>1. 숫자판 점프</summary>
 <a href="https://www.acmicpc.net/problem/2210">Link to</a><br>
